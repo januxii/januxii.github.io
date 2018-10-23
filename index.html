@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="no">
+    <head>
+        <meta charset="utf-8">
+        <title>BO4 XP Calc</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body onload="calculate()">
+        <div>
+            <form>
+                <input type="number" placeholder="Prestige" id="inpPrestige" oninput="calculate()" value="0">
+                <input type="number" placeholder="Level" id="inpLevel" oninput="calculate()" value="55">
+            </form>
+            <table id="table">
+                <tr>
+                    <td>% to Prestige</td>
+                    <td id="tp"></td>
+                </tr>
+                <tr>
+                    <td>% to Master</td>
+                    <td id="tm"></td>
+                </tr>
+                <tr>
+                    <td>% to 1000</td>
+                    <td id="t1"></td>
+                </tr>
+            </table>
+            <div id="levelbarbg">
+                <div id="levelbar"></div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
