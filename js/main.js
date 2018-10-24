@@ -64,8 +64,7 @@ let table = document.getElementById("table");
 let tp = document.getElementById("tp");
 let tm = document.getElementById("tm");
 let t1 = document.getElementById("t1");
-let levelbarbg = document.getElementById("levelbarbg");
-let levelbar = document.getElementById("levelbar");
+let barp = document.getElementById("barp");
 
 function calculate(){
     //Prestige
@@ -73,11 +72,14 @@ function calculate(){
     //Master
     tm.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/16029200).toFixed(1) + "%";
     //Level 1000
-    t1.innerHTML = ((prestige.value*1457200+totalxp[level.value])/(16029200+52486400)*100).toFixed(1) + "%";
+    t1.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/68515600).toFixed(1) + "%";
     
     //Level bar prestige
-    levelbar.style.width = tp.innerHTML;
+    barp.style.width = tp.innerHTML;
     //Level bar master -coming soon-
     //Level bar 1000 -coming soon-
 }
-//master prestige to level 1000 = 52 486 400
+//Level 1-56 = 1 457 200
+//Level 1-Master = 16 029 200
+//Level Master-1000 = 52 486 400
+//Levl 1-Master-1000 = 68 515 600
