@@ -71,9 +71,9 @@ function calculate(){
     //Prestige
     tp.innerHTML = (totalxp[level.value]/1457200*100).toFixed(1) + "%";
     //Master
-    tm.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/14572000).toFixed(1) + "%";
+    tm.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/16029200).toFixed(1) + "%";
     //Level 1000
-    t1.innerHTML = ((prestige.value*1457200+totalxp[level.value])/(14572000+52486400)*100).toFixed(1) + "%";
+    t1.innerHTML = ((prestige.value*1457200+totalxp[level.value])/(16029200+52486400)*100).toFixed(1) + "%";
     
     //Level bar prestige
     levelbar.style.width = tp.innerHTML;
