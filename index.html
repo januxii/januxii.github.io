@@ -5,28 +5,31 @@
         <title>BO4 XP Calc</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body onload="calculate()">
-        <div>
+    <body>
+        <div id="wrapper">
             <form>
-                <input type="number" placeholder="Prestige" id="inpPrestige" oninput="calculate()" value="0">
-                <input type="number" placeholder="Level" id="inpLevel" oninput="calculate()" value="55">
+                <input type="number" id="inpPrestige" oninput="calculate()" placeholder="Prestige">
+                <input type="number" id="inpLevel" oninput="calculate()" placeholder="Level">
             </form>
-            <table id="table">
-                <tr>
-                    <td>% to Prestige</td>
-                    <td id="tp"></td>
-                </tr>
-                <tr>
-                    <td>% to Master</td>
-                    <td id="tm"></td>
-                </tr>
-                <tr>
-                    <td>% to 1000</td>
-                    <td id="t1"></td>
-                </tr>
-            </table>
-            <div class="barbg">
-                <div id="barp"></div>
+            <div>
+                <span>Next Prestige</span>
+                <div class="barbg">
+                    <div id="barp"></div>
+                </div>
+            </div>
+            
+            <div>
+                <span>Master Prestige</span>
+                <div class="barbg">
+                    <div id="barm"></div>
+                </div>
+            </div>
+            
+            <div>
+                <span>Level 1000</span>
+                <div class="barbg">
+                    <div id="bar1"></div>
+                </div>
             </div>
         </div>
         <script src="js/main.js"></script>

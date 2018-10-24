@@ -60,24 +60,40 @@ let totalxp = [
 
 let prestige = document.getElementById("inpPrestige");
 let level = document.getElementById("inpLevel");
-let table = document.getElementById("table");
-let tp = document.getElementById("tp");
-let tm = document.getElementById("tm");
-let t1 = document.getElementById("t1");
 let barp = document.getElementById("barp");
+let barm = document.getElementById("barm");
+let bar1 = document.getElementById("bar1");
+
+barp.innerHTML = "0%";
+barm.innerHTML = "0%";
+bar1.innerHTML = "0%";
 
 function calculate(){
-    //Prestige
-    tp.innerHTML = (totalxp[level.value]/1457200*100).toFixed(1) + "%";
-    //Master
-    tm.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/16029200).toFixed(1) + "%";
-    //Level 1000
-    t1.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/68515600).toFixed(1) + "%";
-    
-    //Level bar prestige
-    barp.style.width = tp.innerHTML;
-    //Level bar master -coming soon-
-    //Level bar 1000 -coming soon-
+    if(prestige.value == ""){
+        prestige.value = 0;
+    }
+    if(level.value == ""){
+        level.value = 1;
+    }
+    else if(level.value > 55){
+        prestige.value = 10;
+        barp.innerHTML = "100%";
+        barm.innerHTML = "100%";
+        bar1.innerHTML = ((16029200+(level.value - 56)*55600)*100/68515600).toFixed(1) + "%";
+    }
+    else{
+        //Prestige
+        barp.innerHTML = (totalxp[level.value]/1457200*100).toFixed(1) + "%";
+
+        //Master
+        barm.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/16029200).toFixed(1) + "%";
+
+        //Level 1000
+        bar1.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/68515600).toFixed(1) + "%";
+    }
+    barp.style.width = barp.innerHTML;
+    barm.style.width = barm.innerHTML;
+    bar1.style.width = bar1.innerHTML;
 }
 //Level 1-56 = 1 457 200
 //Level 1-Master = 16 029 200
