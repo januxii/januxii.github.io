@@ -79,17 +79,17 @@ function calculate(){
         prestige.value = 10;
         barp.innerHTML = "100%";
         barm.innerHTML = "100%";
-        bar1.innerHTML = ((16029200+(level.value - 56)*55600)*100/68515600).toFixed(1) + "%";
+        bar1.innerHTML = ((16029200+(level.value - 56)*55600)/685156).toFixed(1) + "%";
     }
     else{
         //Prestige
-        barp.innerHTML = (totalxp[level.value]/1457200*100).toFixed(1) + "%";
+        barp.innerHTML = (totalxp[level.value]/14572).toFixed(1) + "%";
 
         //Master
-        barm.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/16029200).toFixed(1) + "%";
+        barm.innerHTML = ((prestige.value*1457200+totalxp[level.value])/160292).toFixed(1) + "%";
 
         //Level 1000
-        bar1.innerHTML = ((prestige.value*1457200+totalxp[level.value])*100/68515600).toFixed(1) + "%";
+        bar1.innerHTML = ((prestige.value*1457200+totalxp[level.value])/685156).toFixed(1) + "%";
     }
     barp.style.width = barp.innerHTML;
     barm.style.width = barm.innerHTML;
