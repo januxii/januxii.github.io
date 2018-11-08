@@ -1,3 +1,6 @@
+*{
+    overflow:hidden;
+}
 #wrapper{
     border-radius: 0;
     max-height: 100vh;
