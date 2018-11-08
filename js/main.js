@@ -69,10 +69,10 @@ barm.innerHTML = "0%";
 bar1.innerHTML = "0%";
 
 function calculate(){
-    if(prestige.value == ""){
+    if(prestige.value == "" && prestige != document.activeElement){
         prestige.value = 0;
     }
-    if(level.value == ""){
+    if(level.value == "" && level != document.activeElement){
         level.value = 1;
     }
     else if(level.value > 55){
@@ -95,7 +95,7 @@ function calculate(){
     barm.style.width = barm.innerHTML;
     bar1.style.width = bar1.innerHTML;
 }
-//Level 1-56 = 1 457 200
+//Level 1-Prestige = 1 457 200
 //Level 1-Master = 16 029 200
 //Level Master-1000 = 52 486 400
 //Levl 1-Master-1000 = 68 515 600
